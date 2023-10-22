@@ -36,8 +36,21 @@ Para utilizar o programa, siga os passos abaixo:
     <li><strong>Criar o Banco de Dados:</strong> Execute o arquivo SQL fornecido para criar o banco de dados necessário para o funcionamento do sistema.</li>
     <li><strong>Instalar o Postman:</strong> Baixe e instale o Postman para acessar os endpoints da aplicação.</li>
     <li><strong>Executar a Aplicação:</strong> Inicie o servidor de aplicação em sua IDE.</li>
-    
+
 </ol>
+
+<h2>Configuração do application.properties</h2>
+
+<p>As configurações de login e senha do banco de dados estão localizadas no arquivo <code>application.properties</code>.</p>
+
+<p>Para alterar as configurações, abra o arquivo e encontre as seguintes linhas:</p>
+
+spring.datasource.url=jdbc:mysql://localhost:3306/challengeApiDio<br>
+spring.datasource.username=springstudent<br>
+spring.datasource.password=springstudent<br>
+
+<p>Altere as configurações para o nome do seu Database, os dados de login e senha do banco de dados, respectivamente</p>
+
 
 
 ## Endpoints
@@ -45,18 +58,18 @@ Para utilizar o programa, siga os passos abaixo:
 A aplicação possui os seguintes endpoints:
 
 * **<b>/author</b>**
-    * **<b>/add</b>:** Adiciona um novo autor
-    * **<b>/findById/{id_author}</b>:** Obtém um autor pelo ID
-    * **<b>/findAll</b>:** Obtém todos os autores
-    * **<b>/delete/{id_author}</b>:** Exclui um autor pelo ID
-    * **<b>/update</b>:** Atualiza um autor
+  * **<b>/add</b>:** Adiciona um novo autor
+  * **<b>/findById/{id_author}</b>:** Obtém um autor pelo ID
+  * **<b>/findAll</b>:** Obtém todos os autores
+  * **<b>/delete/{id_author}</b>:** Exclui um autor pelo ID
+  * **<b>/update</b>:** Atualiza um autor
 * **<b>/book</b>**
-    * **<b>/add</b>:** Adiciona um novo livro
-    * **<b>/findById/{id_book}</b>:** Obtém um livro pelo ID
-    * **<b>/findAll</b>:** Obtém todos os livros
-    * **<b>/delete/{id_book}</b>:** Exclui um livro pelo ID
-    * **<b>/update</b>:** Atualiza um livro
-    * **<b>/{id_book}/author/{id_author}</b>:** Associa um autor a um livro
+  * **<b>/add</b>:** Adiciona um novo livro
+  * **<b>/findById/{id_book}</b>:** Obtém um livro pelo ID
+  * **<b>/findAll</b>:** Obtém todos os livros
+  * **<b>/delete/{id_book}</b>:** Exclui um livro pelo ID
+  * **<b>/update</b>:** Atualiza um livro
+  * **<b>/{id_book}/author/{id_author}</b>:** Associa um autor a um livro
 
 ## Exemplos de uso
 
